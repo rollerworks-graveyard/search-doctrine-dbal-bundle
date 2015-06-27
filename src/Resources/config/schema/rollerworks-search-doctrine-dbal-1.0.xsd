@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns="http://rollerworks.github.io/schema/dic/rollerworks-search-doctrine-dbal"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://rollerworks.github.io/schema/dic/rollerworks-search-doctrine-dbal"
+    elementFormDefault="qualified">
+
+    <xsd:element name="config" type="config" />
+
+    <xsd:complexType name="config">
+        <xsd:attribute name="cache-driver" type="xsd:string" />
+    </xsd:complexType>
+
+</xsd:schema>
+

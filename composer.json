@@ -1,0 +1,47 @@
+{
+    "name": "rollerworks/search-doctrine-dbal-bundle",
+    "description": "Doctrine DBAL Symfony integration Bundle for RollerworksSearch",
+    "keywords": ["rollerworks", "search", "doctrine", "dbal", "bundle"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastiaan Stok",
+            "email": "s.stok@rollercapes.net"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Rollerworks/rollerworks-search-doctrine-dbal-bundle/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "doctrine/doctrine-bundle": "~1.1",
+        "rollerworks/search-bundle": "^1.0.0-beta2",
+        "rollerworks/search-doctrine-dbal": "^1.0.0-beta7"
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-dependency-injection-test": "^0.7.1",
+        "matthiasnoback/symfony-service-definition-validator": "^1.2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rollerworks\\Bundle\\SearchDoctrineDbalBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rollerworks\\Bundle\\SearchDoctrineDbalBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

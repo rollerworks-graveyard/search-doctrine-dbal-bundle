@@ -1,0 +1,2 @@
+rollerworks_search_doctrine_dbal:
+    cache_driver:    null

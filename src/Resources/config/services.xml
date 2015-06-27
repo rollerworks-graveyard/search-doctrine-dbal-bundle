@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="rollerworks_search.doctrine_dbal.cache.array_driver" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+        <service id="rollerworks_search.doctrine_dbal.factory" class="Rollerworks\Component\Search\Doctrine\Dbal\DoctrineDbalFactory">
+            <argument type="service" id="rollerworks_search.doctrine_dbal.cache_driver" on-invalid="null" />
+        </service>
+
+        <service id="rollerworks_search.doctrine_dbal.type_extension.field" class="Rollerworks\Component\Search\Extension\Doctrine\Dbal\Type\FieldTypeExtension">
+            <tag name="rollerworks_search.type_extension" alias="field" />
+        </service>
+
+        <service id="rollerworks_search.doctrine_dbal.type_extension.birthday" class="Rollerworks\Component\Search\Extension\Doctrine\Dbal\Type\BirthdayTypeExtension">
+            <tag name="rollerworks_search.type_extension" alias="birthday" />
+            <argument type="service">
+                <service class="Rollerworks\Component\Search\Extension\Doctrine\Dbal\Conversion\AgeDateConversion" />
+            </argument>
+        </service>
+
+        <service id="rollerworks_search.doctrine_dbal.type_extension.money" class="Rollerworks\Component\Search\Extension\Doctrine\Dbal\Type\MoneyTypeExtension">
+            <tag name="rollerworks_search.type_extension" alias="money" />
+            <argument type="service">
+                <service class="Rollerworks\Component\Search\Extension\Doctrine\Dbal\Conversion\MoneyValueConversion" />
+            </argument>
+        </service>
+    </services>
+</container>
