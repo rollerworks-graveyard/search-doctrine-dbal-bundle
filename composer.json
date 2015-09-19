@@ -22,7 +22,8 @@
     },
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^0.7.4",
-        "matthiasnoback/symfony-service-definition-validator": "^1.2.2"
+        "matthiasnoback/symfony-service-definition-validator": "^1.2.2",
+        "matthiasnoback/symfony-config-test": "^1.2.1"
     },
     "autoload": {
         "psr-4": {
