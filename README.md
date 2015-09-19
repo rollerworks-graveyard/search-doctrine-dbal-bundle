@@ -23,11 +23,11 @@ Add the RollerworksSearchDoctrineDbalBundle to your application's kernel:
 
 ```php
 // in AppKernel::registerBundles()
-$bundles = array(
+$bundles = [
     // ...
     new Rollerworks\Bundle\SearchBundle\RollerworksSearchBundle(),
     new Rollerworks\Bundle\SearchDoctrineDbalBundle\RollerworksSearchDoctrineDbalBundle(),
-);
+];
 ```
 
 Configuration
